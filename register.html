@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Register
+        </title>
+       <link rel="stylesheet" href="register.css">
+    </head>
+    <body background="images.jpg">
+        <div class="top-section">
+            <div class="left-top">
+                <a rel="Click here" style="text-decoration: none;" href="poster.html">
+                    <p class="name">
+                        <strong class="name-1">The</strong> 
+                        <strong class="name-2">Track</strong>
+                        <strong class="name-3">Flow</strong>
+                    </p>
+                </a>
+            </div>
+            
+        </div>
+        <div class="box">
+            <h3 id="title">Signup</h3>
+            <div class="input-field">
+                <input class="email"  id="emailInp"  type="text" placeholder="Email">
+                <input class="password"  id="passwordInp" type="password" placeholder="Password">
+                <input class="first-name"  id="Fname" type="text" placeholder="First name">
+                <input class="last-name" id="Lname" type="text" placeholder="Last name">
+            </div>
+            <button  class="signup" id="register-button"> Signup</button>
+            <div class="one-line">
+            <p class="login">Already have an account?</p>
+            <a  class="login-page"  href="login.html">
+                Login
+            </a>
+            </div>
+        </div>
+        <script>
+            disable = function(){
+                let email=document.querySelector('.email');
+                let password=document.querySelector('.password');
+                let passwords =document.querySelector('.password-2');
+                email.value='';
+                password.value='';
+                passwords.value='';
+            }
+        </script>
+          <script type="module">
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+                import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+                import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+                import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+                const firebaseConfig = {
+                apiKey: "AIzaSyDnLVj9fnedpF5bnx6yCQOH04zYs4Cxrco",
+                authDomain: "the-track-flow.firebaseapp.com",
+                projectId: "the-track-flow",
+                storageBucket: "the-track-flow.appspot.com",
+                messagingSenderId: "999329041988",
+                appId: "1:999329041988:web:86afe295f6bfcce8803611",
+                measurementId: "G-MX0G3PY48T"
+                };
+                const app = initializeApp(firebaseConfig);
+                const analytics = getAnalytics(app);
+                const db = getDatabase();
+                const auth = getAuth(app);
+                let EmailInp = document.getElementById('emailInp');
+                let PassInp = document.getElementById('passwordInp');
+                let mainform = document.getElementById('mainform');
+                let FnameInp = document.getElementById('Fname');
+                let LnameInp = document.getElementById('Lname');
+            
+                let registerButton = document.getElementById('register-button');
+            
+                let RegisterUser = evt => {
+                    evt.preventDefault();
+                    createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+                    .then((credentials) =>{
+                        alert("user created!");
+                        set(),ref(db, 'UsersAuthList/' + credentials.user.uid), {
+                            firstname : FnameInp.value,
+                            lastname : LnameInp.value ,
+                            email : EmailInp.value
+            
+                        }
+                    })
+                    .catch((error) =>{
+                        alert(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
+                    })
+                }
+                registerButton.addEventListener('click', RegisterUser);
+        
+        
+          </script>
+        
+    </body>
+</html>

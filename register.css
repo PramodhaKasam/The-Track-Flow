@@ -1,0 +1,147 @@
+body{
+    display: flex;
+    background-size: cover;
+}
+.top-section{
+    position: fixed;
+    top: 0;
+    left : 0;
+    right: 0;
+    display: flex;
+    height: 64px;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 200;
+}
+.left-top{
+    flex: 1;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.name-1{
+    color : white;
+    position: relative;
+    left:10px; 
+    top : -10px;
+}
+.name-2{
+    color : white;
+    position: relative;
+    left:20px;
+    top : -10px;
+}
+.name-3{
+    color : white;
+    position: relative;
+    left: 10px;
+    top:-10px
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 400px;
+    height: 360px;
+    top: 100px;
+    right: -300px;
+    background-color: transparent;
+    border: 2px solid black 0.5;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(40px);
+}
+h3{
+    margin-top: 35px;
+    margin-left: 170px;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+.email{
+    margin-right: 40px;
+    margin-left: 40px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-top: 0px;
+    background-color: transparent;
+}
+.password{
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+.first-name{
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: transparent;
+}
+.last-name{
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+.one-line{
+    display: flex;
+    flex-direction: row;
+}
+.signup{
+    background-color: black;
+    border:none;
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 17px;
+    height: 25px;
+    margin-top: 25px;
+}
+.signup:hover{
+    cursor: pointer;
+}
+.signup:active{
+   border:1px solid black;
+    color: black;
+    background-color: white;
+}
+.login{
+    font-size: 14px;
+    margin-left: 47px;
+    margin-top: 10px;
+}
+.login-page{
+    font-size: 14px;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+}
+.login-page:hover{
+    text-decoration:underline;
+}

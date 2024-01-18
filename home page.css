@@ -1,0 +1,132 @@
+body{
+    padding-top: 80px;
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    row-gap: 22px;
+    column-gap: 22px;
+    padding-left: 10px;
+    background-size: cover  ;
+    background-position: center;
+}
+
+
+.top-section{
+    position: fixed;
+    top: 0;
+    left : 0;
+    right: 0;
+    display: flex;
+    height: 64px;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 200;
+}
+.left-top{
+    width : 100px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.name-1{
+ color : white;
+ position: relative;
+ left:10px; 
+ top : -10px;
+}
+.name-2{
+ color : white;
+ position: relative;
+ left:20px;
+ top : -10px;
+}
+.name-3{
+    color : white;
+    position: relative;
+    left: 10px;
+    top:-10px
+}
+.right-top{
+    display: flex;
+    flex-direction: row;
+}
+.order{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.order-button{
+    color: white;
+    background-color: black;
+    position: relative;
+    width: 50px;
+    right: -740px;
+    top: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.order-button:hover{
+    background-color: black;
+    border: none;
+}
+.cart{
+    position: relative;
+    height: 25px;
+    top: 22px;
+    right: -742px;
+}
+
+.supplier{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid rgb(0,0,0);
+    width : 300px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0,4);
+    transform: scale(1);
+}
+.supplier:hover{
+    transform: scale(1.1);
+}
+.name-tag{
+    margin: 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.phone-number{
+    margin-left: 15px;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+.button{
+    font-size: 14px;
+    height: 24px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: rgb(124, 124, 255);
+    color: white;
+    border: none;
+    transition: 0.1s;
+    width:290px;
+    margin-left: 5px;
+}
+.button:hover{
+    background-color: rgb(113, 113, 238);
+    cursor: pointer;
+}
+.button:active{
+    background-color: white;
+    color: rgb(124, 124, 255);
+    border: 1px solid rgb(124, 124, 255) ; 
+}
+.rating{
+    width: 155px;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
