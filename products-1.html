@@ -1,70 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Products-1
-        </title>
-        <link rel="stylesheet" href="products-1.css">
-    </head>
-    <body>
-        <div class="top-section">
-            <div class="left-top">
-                <a rel="Click here" style="text-decoration: none;" href="poster.html">
-                    <p class="name">
-                        <strong class="name-1">The</strong> 
-                        <strong class="name-2">Track</strong>
-                        <strong class="name-3">Flow</strong>
-                    </p>
-                </a>
-            </div>
-           
-                
-            <div class="right-top">
-                <a href="home page.html">
-                    <button class="button-home">Home</button>
-                </a>
-                <a  style="text-decoration: none;" href="shipping.html">
-                    <div class="order">
-                        <img class="cart" src="cart-icon.png">
-                        <p class="cartQuantity"></p>
-                        <button class="order-button">Order</button>
-                    </div>
-                </a>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products-1</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header class="top-section">
+        <div class="left-top">
+            <a href="poster.html" style="text-decoration: none;">
+                <p class="name">
+                    <strong class="name-1">The</strong> 
+                    <strong class="name-2">Track</strong>
+                    <strong class="name-3">Flow</strong>
+                </p>
+            </a>
+        </div>    
+        <div class="right-top">
+            <a href="shipping.html" style="text-decoration: none;">
+                <div class="order">
+                    <img class="cart" src="Images/cart-icon.png" alt="Cart">
+                    <button class="order-button">Order</button>
+                </div>
+            </a>
         </div>
+    </header>
+    
+    <main>
         <button class="p">
             <div class="left">
-                <strong class="name-p"> Garlic</strong>
+                <strong class="name-p">Garlic</strong>
                 <p class="code">71029022</p>
             </div>
             <div class="center">
                 <p class="description">
                     A herb growing from a strongly aromatic, 
-                    rounded bulb composed of 10 to 20 
-                    cloves covered in a papery coat.
-                 </p>
+                    rounded bulb composed of 10 to 20 cloves covered in a papery coat.
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">52kg</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Garlic">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
-                <strong class="name-p"> Ginger</strong>
+                <strong class="name-p">Ginger</strong>
                 <p class="code">19809022</p>
             </div>
             <div class="center">
                 <p class="description">
                     A thickened pungent aromatic rhizome 
                     that is used as a spice.
-                 </p>
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">7kg</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Ginger">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
                 <strong class="name-p">Corn</strong>
@@ -75,13 +78,17 @@
                     Corn is a tall annual cereal grass 
                     that is widely grown for its 
                     elongated ears of starchy seeds.
-                 </p>
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">15kg</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Corn">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
                 <strong class="name-p">Millet</strong>
@@ -89,16 +96,20 @@
             </div>
             <div class="center">
                 <p class="description">
-                   Millets are small-grained, annual,
-                   warm-weather cereals belonging to 
-                   the grass family.
-                 </p>
+                    Millets are small-grained, annual,
+                    warm-weather cereals belonging to 
+                    the grass family.
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">13kg</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Millet">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
                 <strong class="name-p">Coconuts</strong>
@@ -106,16 +117,20 @@
             </div>
             <div class="center">
                 <p class="description">
-                   Coconut is a round and elongate fruit of 
-                   white, fibrous and oily meat covered by a thick,
-                   brown and hairy shell.
-                 </p>
+                    Coconut is a round and elongate fruit of 
+                    white, fibrous and oily meat covered by a thick,
+                    brown and hairy shell.
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">163 pieces</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Coconuts">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
                 <strong class="name-p">Pepper</strong>
@@ -126,41 +141,37 @@
                     Pepper or black pepper is the dried 
                     unripe fruit grown in the plant called 
                     'piper nigrum'.
-                 </p>
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">6.6kg</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Pepper">Add</button>
+            </div>
         </button>
+
         <button class="p">
             <div class="left">
-                <strong class="name-p"> Egg</strong>
+                <strong class="name-p">Egg</strong>
                 <p class="code">69829022</p>
             </div>
             <div class="center">
                 <p class="description">
-                   The eggs of hen.
-                 </p>
+                    The eggs of hen.
+                </p>
             </div>
             <div class="right">
                 <strong class="stock-h">Current stock levels</strong>
                 <p class="stock">43 dozens</p>
             </div>
+            <div class="Next-right">
+                <button class="add js-add" data-product-name="Egg">Add</button>
+            </div>
         </button>
-        <button  class="add js-add" data-product-name="Garlic" >add</button>
-        <button  class="add1 js-add" data-product-name="Ginger" >add</button>
-        <button  class="add2 js-add" data-product-name="Corn" >add</button>
-        <button  class="add3 js-add" data-product-name="Millet" >add</button>
-        <button  class="add4 js-add" data-product-name="Coconuts" >add</button>
-        <button  class="add5 js-add" data-product-name="Pepper" >add</button>
-        <button  class="add6 js-add" data-product-name="Egg" >add</button>
-        <script>
-            
-            
-        </script>
-        <script type="module" src="products.js"></script>
-        
-        
-    </body>
+    </main>
+
+    <script type="module" src="products.js"></script>
+</body>
 </html>

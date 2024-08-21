@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 0 5px;
+    z-index: 1000;
+}
+
+.left-top {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.name-1,
+.name-2,
+.name-3 {
+    color: white;
+    margin: 0;
+}
+
+.name-1 {
+    position: relative;
+    left: 10px;
+}
+
+.name-2 {
+    position: relative;
+    left: 20px;
+}
+
+.name-3 {
+    position: relative;
+    left: 10px;
+}
+
+.right-top {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-left: 800px;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    background-color: #444; 
+    border-radius: 5px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cart {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.order-button {
+    background-color:white; 
+    color:  #0E2C53;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.order-button:hover {
+    background-color: #0056a0;
+    color: white; 
+    transform: scale(1.05); 
+}
+
+.order-button:active {
+    background-color: #004080; 
+    color: white;
+}
+
+button.p {
+    height: auto;
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+button.p:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button.p .left {
+    width: 200px;
+}
+
+button.p .center {
+    flex: 1;
+}
+
+button.p .right {
+    width: 325px;
+}
+
+.name-p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.code {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.stock {
+    font-size: 14px;
+    color: #333;
+}
+
+button.add {
+    width: 70px;
+    height: 30px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button.add:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button.add:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+}
