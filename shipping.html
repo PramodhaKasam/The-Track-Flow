@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Shipping</title>
-        <link rel="stylesheet" href="shipping.css">
-    </head>
-    <body background="images.jpg">
-        <div class="top-section">
-            <div class="left-top">
-                <a rel="Click here" style="text-decoration: none;" href="poster.html">
-                    <p class="name">
-                        <strong class="name-1">The</strong> 
-                        <strong class="name-2">Track</strong>
-                        <strong class="name-3">Flow</strong>
-                    </p>
-                </a>
-            </div>
-            <div class="right-top">
-                <button class="button-login">Track</button>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping</title>
+    <link rel="stylesheet" href="shipping.css">
+</head>
+<body>
+    <header class="top-section">
+        <div class="left-top">
+            <a rel="Click here" style="text-decoration: none;" href="poster.html">
+                <p class="name">
+                    <strong class="name-1">The</strong> 
+                    <strong class="name-2">Track</strong>
+                    <strong class="name-3">Flow</strong>
+                </p>
+            </a>
         </div>
-        <div class="left-body">
-            <div class="content"></div>
-            <div class="button"></div>
+        <div class="right-top">
+            <button class="button-login">Track</button>
         </div>
-        <div class="right-body">
-            <h3>Address</h3>
-            <input class="address" placeholder="Address">
-        </div>
-        <script type="module" src="shipping.js"></script>
-        <script type="module" src="shipping-2.js"></script>
+    </header>
 
-    </body>
+    <div class="left-body">
+        <div class="content" id="order-container"></div>
+        <div class="button"></div>
+    </div>
+
+    <div class="right-body">
+        <h3>Address</h3>
+        <input class="address" placeholder="Enter your address">
+        <button class="add">Add Address</button>
+    </div>
+
+    <script type="module" src="shipping.js"></script>
+    <script type="module" src="shipping-2.js"></script>
+</body>
 </html>

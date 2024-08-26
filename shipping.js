@@ -1,8 +1,5 @@
 import {removeFromCart , items , saveToStorage} from './products.js'
 
-
-
-
  export  let products =[{
                 productName : 'Rice-flour',
                 productCost : '45',
@@ -215,30 +212,23 @@ import {removeFromCart , items , saveToStorage} from './products.js'
             }
  ]
 
-
 let matchingProduct;
 let orderHTML;
 items.forEach((item) =>{
-   
     const productName = item.productName;
-       
-    
     let matchingProduct;
-
     products.forEach((product) =>{
         if(product.productName === productName){
             matchingProduct = product;
         }
     })
     orderHTML +=  ` <div class="order order-${matchingProduct.productName}">
-                           
                             <button class="close-button" 
                              data-product-name="${matchingProduct.productName}" >
                                 <span class="tooltip">Remove</span>
-                                <img class="close"src="10263335.png">
+                                <img class="close"src="Images/10263335.png">
                             </button>
                             <div class="one">
-                               
                                 <div class="left">
                                     <h4 class="Name">${matchingProduct.productName}</h4>
                                     <span class="reqP"> Quantity required:</span>
@@ -268,9 +258,10 @@ items.forEach((item) =>{
                                 </div>
                             </div>
                      </div>`
+
     let generate = document.querySelector('.content');
     let generate2 = document.querySelector('.button');
-    generate.innerHTML = orderHTML  ;
+    generate.innerHTML = orderHTML ;
     generate2.innerHTML = `<button class="add">Change the product</button>`
     let generate3 = document.querySelector('.add');
     generate3.addEventListener('click' , () =>{
@@ -280,30 +271,21 @@ items.forEach((item) =>{
         window.location.href = 'home page.html';
     })
 
-    
-   
-   
-   
-
     document.querySelectorAll('.close-button')
     .forEach((close) =>{
         close.addEventListener('click', () =>{
-        let productName = close.dataset.productName;
-        removeFromCart(productName);
-        let container = document.querySelector(`.order-${productName}`);
-        container.remove();  
-        
-        generate2.innerHTML = `<button class="add">Add another product</button>`
-        let generate3 = document.querySelector('.add');
-        generate3.addEventListener('click' , () =>{
-            window.location.href= 'home page.html';
-        })
-
-
+            let productName = close.dataset.productName;
+            removeFromCart(productName);
+            let container = document.querySelector(`.order-${productName}`);
+            container.remove();  
+            
+            generate2.innerHTML = `<button class="add">Add another product</button>`
+            let generate3 = document.querySelector('.add');
+            generate3.addEventListener('click' , () =>{
+                window.location.href= 'home page.html';
+            })
         });
     });
-            
- 
 })
 
 let stock = document.querySelector('.stock');
@@ -324,10 +306,6 @@ save.addEventListener('click', () =>{
     }
 })
  
-
-
-
-
 var today = new Date();
 var date = (today.getDate()+ 2)+ '/'+ (today.getMonth()+ 1)+ '/'+ today.getFullYear();
 let ship = document.querySelectorAll('.shipping2');

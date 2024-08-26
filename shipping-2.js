@@ -31,20 +31,13 @@ document.querySelectorAll('.ship')
                 if(item.productName = productName){
                     matchItem = item;
                 }
-               
             })
             if(matchItem){
                 matchItem.deliveryDate = shop.value;
                 matchItem.destination = address.value;
-                
             }
-           
-            
-
             saveToStorage();
             console.log(items);
-            
-            
         })
     })
 
@@ -64,13 +57,9 @@ document.querySelectorAll('.ship')
             if(matchItem){
                 matchItem.deliveryDate = shop1.value;
                 matchItem.destination = address.value;
-
             } 
                saveToStorage();
                console.log(items);
-
-            
-            
         });
     })
 
@@ -92,13 +81,8 @@ document.querySelectorAll('.ship')
                     matchItem.destination = address.value;
 
                 }
-                
                 saveToStorage();
                 console.log(items);
-            
-            
-
-            
         })
     })
 
