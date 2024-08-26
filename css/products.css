@@ -97,13 +97,14 @@ header.top-section {
     color: white;
 }
 
-button.p {
+.p {
     height: auto;
     width:100%;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
     display: flex;
+    column-gap: 20px;
     align-items: flex-start;
     margin-bottom: 0px;
     background-color: #fff;
@@ -112,21 +113,25 @@ button.p {
     position: relative;
 }
 
-button.p:hover {
+.p:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-button.p .left {
-    width: 200px;
+.p .left {
+    width: 100px;
 }
 
-button.p .center {
+.p .center {
     flex: 1;
 }
 
-button.p .right {
-    width: 325px;
+.p .right {
+    width: 155px;
+}
+
+.p .Next-right{
+    width: 100px;
 }
 
 .name-p {

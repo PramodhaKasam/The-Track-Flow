@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e4f5);
+    padding-top: 80px;
+    color: #333;
+}
+
+header.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 0 5px;
+    z-index: 1000;
+}
+
+.left-top {
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-1{
+ color : white;
+ position: relative;
+ left:10px; 
+ top : 0px;
+}
+
+.name-2{
+    color : white;
+    position: relative;
+    left:20px;
+    top : 0px;
+}
+
+.name-3{
+    color : white;
+    position: relative;
+    left: 10px;
+    top:0px
+}
+
+select {
+    width: 100%;
+    margin-left: calc(100% - 450px );
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+select option {
+    padding: 10px;
+    font-weight: normal;
+    background-color: #fff;
+    color: #333;
+}
+
+select option:hover {
+    background-color: #eee;
+}
+
+
+.container {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 17px;
+    position: relative;
+    color: #0E2C53;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 20%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.instruction {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.productId {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    z-index: 1000;
+}
+
+.productId:focus {
+    border-color: #0E2C53;
+    outline: none;
+}
+
+.track {
+    width: 100px;
+    height: 40px;
+    background-color: #0E2C53;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.track:hover {
+    background-color: red;
+}
+
+.caution {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.c-1 {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .track {
+        width: 100%;
+    }
+}
+
+.details {
+    margin-top: -20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.shipment, .shipment1 {
+    margin-top: 20px;
+    padding: 0px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.shipment1 {
+    margin-bottom: 15px;
+}
+
+.tag-1 {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.q-a {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.q p, .a p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.a1 {
+    color: red;
+}
+
+.question {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.yesCheck, .noCheck {
+    margin-left: 10px;
+}
+
+.yes, .no {
+    font-size: 14px;
+    color: #666;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.yes:hover {
+    color: green;
+}
+
+.no:hover {
+    color: red;
+}
+

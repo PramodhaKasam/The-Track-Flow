@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Track Flow</title>
+    <link rel="stylesheet" href="../css/poster.css">
+</head>
+<body>
+    <header class="top-section">
+        <div class="left-top">
+            <p class="name">
+                <strong class="name-1">The</strong>
+                <strong class="name-2">Track</strong>
+                <strong class="name-3">Flow</strong>
+            </p>
+        </div>
+        <nav class="middle-top">
+            <a class="nav-link" href="about us.html">About Us</a>
+            <span class="nav-link" onclick="scrollToBottom();">Feedback</span>
+            <a class="nav-link" href="customer care.html">Customer Care</a>
+        </nav>
+        <div class="right-top">
+            <button class="button-login" id="signout">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <section id="anime"></section>
+        <div class="button-container">
+            <div class="button-1">
+                <img src="../Images/icon-pickup.png" class="phone" alt="Pickup Icon">
+                <p class="tag">Buy your shipment</p>
+                <p class="info">Add products to buy</p>
+                <button onclick="window.location.href = 'home page.html';" class="do">Buy Now</button>
+            </div>
+            <div class="button-2">
+                <img src="../Images/icon-tracking.png" class="track" alt="Tracking Icon">
+                <p class="tag">Track your shipment</p>
+                <p class="info">Click to know where your parcel has reached</p>
+                <button onclick="window.location.href = 'tracking.html';" class="do-1">Track a Shipment</button>
+            </div>
+        </div>
+
+        <section class="form">
+            <input class="main" type="text" placeholder="Name">
+            <input class="email" type="email" placeholder="Email">
+            <textarea class="Feedback" placeholder="Feedback"></textarea>
+            <button class="submit" onclick="
+                let name = document.querySelector('.main');
+                let email = document.querySelector('.email');
+                let feedback = document.querySelector('.Feedback');
+                if(name.value !== '' && email.value !== '' && feedback.value !== ''){
+                    name.value = '';
+                    email.value = '';
+                    feedback.value = '';
+                    alert('Feedback submitted successfully');
+                    scrollToTop();
+                } else {
+                    alert('Error');
+                }
+            ">Submit</button>
+        </section>
+    </main>
+    <script>
+        function scrollToBottom(){
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+        function scrollToTop(){
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <script type="module">
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
+        let signoutBtn = document.getElementById('signout');
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-info");
+            window.location.href = 'register.html';
+        };
+        signoutBtn.addEventListener('click', Signout);
+    </script>
+</body>
+</html>

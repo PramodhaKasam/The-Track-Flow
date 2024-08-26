@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+    <body >
+        <header class="top-section">
+            <div class="left-top">
+                <a rel="Click here" style="text-decoration: none;" href="poster.html">
+                    <p class="name">
+                        <strong class="name-1">The</strong> 
+                        <strong class="name-2">Track</strong>
+                        <strong class="name-3">Flow</strong>
+                    </p>
+                </a>
+            </div>
+            
+        </header>
+        <div class="box">
+            <h3 id="title">Login</h3>
+            <div class="input-field" id="mainform">
+                <input class="username" id="emailInp" type="text" placeholder="Username">
+                <input class="password" id="passwordInp" type="password" placeholder="Password">
+            </div>
+            <div class="one-line">
+                <input class="checkbox" type="checkbox">
+                <p class="remember">Remember me</p>
+                <a class="forgot" href="Forgot Password.html">Forgot Password?</a>
+            </div> 
+                 <button type="submit" class="login" id="login-button" > Login</button>
+                 <div class="one-line">
+                    <p class="register">Don't have an account?</p>
+                    <a  class="register-page"  href="register.html">
+                        Register
+                    </a>
+                 </div>
+        </div>
+        <script>
+            disappear = function(){
+                let username=document.querySelector('.username');
+                let password=document.querySelector('.password');
+                username.value='';
+                password.value='';
+            }
+        </script>
+       <script type="module">
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+                import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+                import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+                import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+                const firebaseConfig = {
+                apiKey: "AIzaSyDnLVj9fnedpF5bnx6yCQOH04zYs4Cxrco",
+                authDomain: "the-track-flow.firebaseapp.com",
+                projectId: "the-track-flow",
+                storageBucket: "the-track-flow.appspot.com",
+                messagingSenderId: "999329041988",
+                appId: "1:999329041988:web:86afe295f6bfcce8803611",
+                measurementId: "G-MX0G3PY48T"
+                };
+                const app = initializeApp(firebaseConfig);
+                const analytics = getAnalytics(app);
+                const db = getDatabase();
+                const auth = getAuth(app);
+                const dbref = ref(db);
+                let EmailInp = document.getElementById('emailInp');
+                let PassInp = document.getElementById('passwordInp');
+                let mainform = document.getElementById('mainform');
+                let loginButton = document.getElementById('login-button');
+                let SignInUser = evt => {
+                    evt.preventDefault();
+                    signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+                    .then((credentials) =>{
+                        get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) =>{
+                            if(snapshot.exists){
+                                sessionStorage.setItem("user-info", Json.stringify({
+                                    firstname : snapshot.val().firstname ,
+                                    lastname : snapshot.val().lastname
+            
+                                }))
+                                alert('User logged in!');
+                                sessionStorage.setItem("user-creds" , JSON.stringify(credentials.user));
+                                window.location.href= 'poster.html';
+            
+                            }
+                        })
+                    })
+                    .catch((error) =>{
+                        alert(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
+                    })
+                }
+                loginButton.addEventListener('click', SignInUser);
+                loginButton.addEventListener('click', () =>{
+                    window.location.href= 'poster.html';
+                })
+    
+    
+    
+      </script>
+       
+    </body>
+</html>

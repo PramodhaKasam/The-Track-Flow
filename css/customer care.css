@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; 
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 0 5px;
+    z-index: 1000;
+}
+
+.left-top {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.name-1,
+.name-2,
+.name-3 {
+    color: white;
+    margin: 0;
+}
+
+.name-1 {
+    position: relative;
+    left: 10px;
+}
+
+.name-2 {
+    position: relative;
+    left: 20px;
+}
+
+.name-3 {
+    position: relative;
+    left: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #222;
+    border-bottom: 2px solid red;
+    display: inline-block;
+}
+
+.note {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.email-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.points {
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.point {
+    display: block;
+    margin-top: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.point::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .note, .points {
+        font-size: 14px;
+    }
+}

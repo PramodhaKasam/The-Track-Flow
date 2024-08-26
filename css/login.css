@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 0 5px;
+    z-index: 1000;
+}
+
+.left-top {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.name-1,
+.name-2,
+.name-3 {
+    color: white;
+    margin: 0;
+}
+
+.name-1 {
+    position: relative;
+    left: 10px;
+}
+
+.name-2 {
+    position: relative;
+    left: 20px;
+}
+
+.name-3 {
+    position: relative;
+    left: 10px;
+}
+
+
+.box {
+    background-color: white;
+    width: 320px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.one-line {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.remember, .forgot {
+    color: #555;
+}
+
+.remember{
+    margin-right: 80px;
+}
+
+.remember:hover, .forgot:hover {
+    text-decoration: underline;
+}
+
+.login {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #4cae4c;
+}
+
+.register {
+    color: #333;
+    margin-left: 20%;
+}
+
+.register-page {
+    color: #5cb85c;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.register-page:hover {
+    text-decoration: underline;
+}
