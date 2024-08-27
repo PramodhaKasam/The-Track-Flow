@@ -9,7 +9,7 @@ products.forEach((product) =>{
         matchingProduct = product;
     }
 })
-orderHTML +=  ` <div class="order order-${matchingProduct.productName}">
+orderHTML =  ` <div class="order order-${matchingProduct.productName}">
                         <button class="close-button" 
                             data-product-name="${matchingProduct.productName}" >
                             <span class="tooltip">Remove</span>
