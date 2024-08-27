@@ -1,5 +1,25 @@
-import {items} from './products.js'
 import { products } from './array.js';
+import { items, removeFromCart } from './products.js';
+export let adders = JSON.parse(sessionStorage.getItem('adders'));
+if(!adders)
+{
+    adders = [
+
+    ];
+}
+
+if(items.length != 0)
+{
+    if(items[0].deliveryDate != 'Not Choosed' && items[0].destination != 'Not Choosed'  && items[0].stock != 'Not Choosed')
+    {
+        console.log("YES");
+        adders.push(items[0]);
+        sessionStorage.setItem('adders', JSON.stringify(adders));
+        removeFromCart(items[0]);
+    }
+
+}
+console.log(adders);
 
 let section;
 let matchedProduct;
@@ -13,10 +33,10 @@ track.addEventListener('click' , () =>{
     products.forEach((product) =>{
         if(product.productId === productId.value){
             matchedProduct = product;
-            items.forEach((item) =>{
+            adders.forEach((item) =>{
                 if(item.productName === matchedProduct.productName){
                     doubleMatchedProduct = matchedProduct;
-                    section +=
+                    section =
                                 `<div class="shipment">
                                     <button class="tag-1">Shipment Summary</button>
                                     <div class="q-a">
@@ -42,7 +62,7 @@ track.addEventListener('click' , () =>{
                                         </div>
                                         <div class="a">
                                             <p class="a-1">${doubleMatchedProduct.origin}</p>
-                                            <p class="a-2">${doubleMatchedProduct.productName}</p>
+                                            <p class="a-2">${item.stock}${doubleMatchedProduct.measure} of ${doubleMatchedProduct.productName}</p>
                                             <p class="a-3">${item.destination}</p>
                                         </div>
                                     </div>
@@ -53,10 +73,12 @@ track.addEventListener('click' , () =>{
                                         <div class="q">
                                             <p class="q-1">Delivery Status</p>
                                             <p class="q-2">Date to be delivered </p>
+                                             <p class="q-3">Cost of the package</p>
                                         </div>
                                         <div class="a">
                                             <p class="a1 js-a1">Undelivered</p>
                                             <p class="a-2">${item.deliveryDate}</p>
+                                            <p class="a-3">Rs.${item.stock * doubleMatchedProduct.productCost}</p>
                                         </div>
                                     </div>
                                 </div>

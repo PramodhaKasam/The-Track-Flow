@@ -1,3 +1,4 @@
+
 export  let products =[{
     productName : 'Rice-flour',
     productCost : '45',
@@ -5,7 +6,7 @@ export  let products =[{
     measure : 'kg',
     productId : '11029022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Palakol'
 }, {
     productName : 'Sugar',
     productCost : '40',
@@ -13,7 +14,7 @@ export  let products =[{
     measure : 'kg',
     productId : '12119022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Rajahmundry'
 },{
     productName : 'Salt',
     productCost : '38',
@@ -21,7 +22,7 @@ export  let products =[{
     measure : 'kg',
     productId : '13456098',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'MAncherial'
 }, {
     productName : 'Turmeric',
     productCost : '70',
@@ -29,7 +30,7 @@ export  let products =[{
     measure : 'kg',
     productId : '15678908',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Ongole'
 }, {
     productName : 'Apples',
     productCost : '120',
@@ -37,7 +38,7 @@ export  let products =[{
     measure : 'kg',
     productId : '10034567',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Mandapet'
 }, {
     productName : 'Sesame',
     productCost : '79',
@@ -45,7 +46,7 @@ export  let products =[{
     measure : 'kg',
     productId : '11034522',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Srikakulam'
 }, {
     productName : 'Groundnuts',
     productCost : '180',
@@ -53,7 +54,7 @@ export  let products =[{
     measure : 'kg',
     productId : '23456780',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Vizianagaram'
 }, {
     productName : 'Jaggery',
     productCost : '115',
@@ -61,7 +62,7 @@ export  let products =[{
     measure : 'kg',
     productId : '12456786',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Kagaznagar'
 }, {
     productName : 'rice',
     productCost : '09',
@@ -69,7 +70,7 @@ export  let products =[{
     measure : 'kg',
     productId : '22102922',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Vijayawada'
 }, {
     productName : 'Cashew',
     productCost : '90',
@@ -77,7 +78,7 @@ export  let products =[{
     measure : 'kg',
     productId : '00129022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Kazipet'
 }, {
     productName : 'Honey',
     productCost : '200',
@@ -85,7 +86,7 @@ export  let products =[{
     measure : 'kg',
     productId : '19922778',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Karimnagar'
 }, {
     productName : 'Fenugreek',
     productCost : '70',
@@ -93,7 +94,7 @@ export  let products =[{
     measure : 'kg',
     productId : '12367678',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Adilabad'
 }, {
     productName : 'Wheat',
     productCost : '20',
@@ -101,7 +102,7 @@ export  let products =[{
     measure : 'kg',
     productId : '11129022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Nirmal'
 }, {
     productName : 'Vermicelli',
     productCost : '50',
@@ -109,7 +110,7 @@ export  let products =[{
     measure : 'kg',
     productId : '12620098',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Kamareddy'
 }, {
     productName : 'Almond',
     productCost : '130',
@@ -117,7 +118,7 @@ export  let products =[{
     measure : 'kg',
     productId : '24567834',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Huzurabad'
 },{
     productName : 'Olive oil',
     productCost : '90',
@@ -125,7 +126,7 @@ export  let products =[{
     measure : 'Lt',
     productId : '26029022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+     origin : 'Hanmakonda'
 }, {
     productName : 'Walnut',
     productCost : '160',
@@ -133,7 +134,7 @@ export  let products =[{
     measure : 'kg',
     productId : '81199022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Wanaparthy'
 }, {
     productName : 'Toor dal',
     productCost : '55',
@@ -141,7 +142,7 @@ export  let products =[{
     measure : 'kg',
     productId : '90029022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Rangareddy'
 }, {
     productName : 'Bread',
     productCost : '5',
@@ -149,7 +150,7 @@ export  let products =[{
     measure : 'loaf',
     productId : '90000022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Nizamabad'
 }, {
     productName : 'Garlic',
     productCost : '120',
@@ -157,7 +158,7 @@ export  let products =[{
     measure : 'kg',
     productId : '71029022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Narsapet'
 
 }, {
     productName : 'Ginger',
@@ -166,7 +167,7 @@ export  let products =[{
     measure : 'kg',
     productId : '19809022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Hyderabad'
 }, {
     productName : 'Corn',
     productCost : '80',
@@ -174,7 +175,7 @@ export  let products =[{
     measure : 'kg',
     productId : '55629022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Nellore'
 },{
     productName : 'Millet',
     productCost : '60',
@@ -182,7 +183,7 @@ export  let products =[{
     measure : 'kg',
     productId : '09929022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Chittor'
 }, {
     productName : 'Coconuts',
     productCost : '30',
@@ -190,7 +191,7 @@ export  let products =[{
     measure : 'number',
     productId : '31909022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Kakinada'
 },{
     productName : 'Pepper',
     productCost : '60',
@@ -198,7 +199,7 @@ export  let products =[{
     measure : 'kg',
     productId : '44429022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Athreyapuram'
 },{
     productName : 'Egg',
     productCost : '60',
@@ -206,6 +207,6 @@ export  let products =[{
     measure : 'dozen',
     productId : '69829022',
     deliveryDate : '19/01/2024',
-    destination : 'Kaatmandu'
+    origin : 'Amalapuram'
 }
 ]

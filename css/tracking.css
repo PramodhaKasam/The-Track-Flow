@@ -188,7 +188,7 @@ h2::after {
 }
 
 .details {
-    margin-top: -20px;
+    margin-top: 0px;
     font-size: 14px;
     color: #333;
 }

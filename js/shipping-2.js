@@ -45,21 +45,6 @@ shop2.addEventListener('change' , () =>{
 
 console.log(items);
 
-let quanReq = document.querySelector('.quantityReq');
-
-let buttonLogin = document.querySelector('.button-login');
-buttonLogin.addEventListener('click' , () =>{
-    if(items.length === 0){
-        alert('No products added');
-    }  
-    else if(address.value === '' ){
-        alert('Enter the destination');
-    }
-    else if(quanReq.value === ''){
-        alert('Enter the quantity required');
-    }
-    else{
-        items[0].destination = address.value;
-        window.location.href = 'tracking.html';
-    }
+document.querySelector('.button-login').addEventListener('click' , () =>{
+    window.location.href = 'tracking.html';
 })

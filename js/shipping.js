@@ -81,6 +81,13 @@ save.addEventListener('click', () =>{
         quanReq.value = '';
     } 
     else if(quanReq.value !== ''){
+        items[0].stock = quanReq.value;
+        products.forEach((product) =>{
+            if(product.productName === productName){
+                product.stock -= Number(quanReq.value);
+            }
+        })
+        
         alert(`Order for ${quanReq.value}${measure.innerHTML} is placed.`);
     } 
     else{

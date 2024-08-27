@@ -21,15 +21,17 @@ document.querySelectorAll('.js-add')
                 items.push({
                     productName : productName , 
                     quantity : 1 ,
-                    deliveryDate : '19/01/2024',
-                    destination : 'Karimnagar',
-                    shippingDate: date
+                    deliveryDate : 'Not Choosed',
+                    destination : 'Not Choosed',
+                    shippingDate: date,
+                    stock: 'Not Choosed'
                 });
                 console.log(items);
                 saveToStorage();
+                alert(`The product ${productName} is added to the cart!!`);
             }
             else{
-                alert('You can add only one product at a time');
+                alert('You can add only one product at a time!!');
             }
         })  
     })
