@@ -82,13 +82,13 @@ save.addEventListener('click', () =>{
     } 
     else if(quanReq.value !== ''){
         items[0].stock = quanReq.value;
-        products.forEach((product) =>{
-            if(product.productName === productName){
-                product.stock -= Number(quanReq.value);
-            }
-        })
-        
+        saveToStorage();
         alert(`Order for ${quanReq.value}${measure.innerHTML} is placed.`);
+        if(items[0].deliveryDate != 'Not Choosed' && items[0].destination != 'Not Choosed')
+            {
+                alert(`The order for the product ${items[0].productName} has been placed.\nTrack the product to know more details.`);
+                window.location.href = 'tracking.html';
+            }
     } 
     else{
         alert(`Enter the quantity of ${name.innerHTML} required.\nChoose something below ${stock.innerHTML}${measure.innerHTML}`);

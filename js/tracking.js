@@ -78,7 +78,7 @@ track.addEventListener('click' , () =>{
                                         <div class="a">
                                             <p class="a1 js-a1">Undelivered</p>
                                             <p class="a-2">${item.deliveryDate}</p>
-                                            <p class="a-3">Rs.${item.stock * doubleMatchedProduct.productCost}</p>
+                                            <p class="a-3">Rs.${item.stock * doubleMatchedProduct.productCost} + CT</p>
                                         </div>
                                     </div>
                                 </div>

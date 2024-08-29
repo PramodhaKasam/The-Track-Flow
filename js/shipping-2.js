@@ -11,36 +11,53 @@ shop1.value = formatteddate5;
 shop2.value = formattedTomorrow;
 
 shop.addEventListener('change' , () =>{
-    if(address.value === ''){
-        alert('Choose the destination first');
-        shop.checked = false;
-    }
     items[0].deliveryDate = shop.value;
-    items[0].destination = address.value;
     saveToStorage();
+    alert(`${items[0].deliveryDate} has been chosen for the delivery of ${items[0].productName}.`);
+    if(items[0].stock != 'Not Choosed' && items[0].destination != 'Not Choosed')
+        {
+            alert(`Order for the product ${items[0].productName} has been placed.\nTrack the product to know more details.`);
+            window.location.href = 'tracking.html';
+        }
     console.log(items);
 })
 
 shop1.addEventListener('change' , () =>{
-    if(address.value === ''){
-        alert('Choose the destination first');
-        shop1.checked = false;
-    }
     items[0].deliveryDate = shop1.value;
-    items[0].destination = address.value;
     saveToStorage();
+    alert(`${items[0].deliveryDate} has been chosen for the delivery of ${items[0].productName}.`);
+    if(items[0].stock != 'Not Choosed' && items[0].destination != 'Not Choosed')
+        {
+            alert(`Order for the product ${items[0].productName} has been placed.\nTrack the product to know more details.`);
+            window.location.href = 'tracking.html';
+        }
     console.log(items);
 });
 
 shop2.addEventListener('change' , () =>{
-    if(address.value === ''){
-        alert('Choose the destination first');
-        shop2.checked = false;
-    }
-    items[0].deliveryDate = shop1.value;
-    items[0].destination = address.value;
+    items[0].deliveryDate = shop2.value;
     saveToStorage();
+    alert(`${items[0].deliveryDate} has been chosen for the delivery of ${items[0].productName}.`);
+    if(items[0].stock != 'Not Choosed' && items[0].destination != 'Not Choosed')
+        {
+            alert(`Order for the product ${items[0].productName} has been placed.\nTrack the product to know more details.`);
+            window.location.href = 'tracking.html';
+        }
     console.log(items);
+})
+
+document.querySelector('.add-address').addEventListener('click', () =>{
+    if(address.value != ' ')
+    {
+        items[0].destination = address.value;
+        saveToStorage();
+        alert('Destination is saved');
+        if(items[0].stock != 'Not Choosed' && items[0].deliveryDate != 'Not Choosed')
+            {
+                alert(`Order for the product ${items[0].productName} has been placed.\nTrack the product to know more details.`);
+                window.location.href = 'tracking.html';
+            }
+    }
 })
 
 console.log(items);

@@ -1,4 +1,3 @@
-
 export  let products =[{
     productName : 'Rice-flour',
     productCost : '45',
