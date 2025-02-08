@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Track Flow</title>
-    <link rel="stylesheet" href="../css/poster.css">
+    <link rel="stylesheet" href="./css/poster.css">
 </head>
 <body>
     <header class="top-section">
@@ -16,9 +16,9 @@
             </p>
         </div>
         <nav class="middle-top">
-            <a class="nav-link" href="about us.html">About Us</a>
+            <a class="nav-link" href="./html/about us.html">About Us</a>
             <span class="nav-link" onclick="scrollToBottom();">Feedback</span>
-            <a class="nav-link" href="customer care.html">Customer Care</a>
+            <a class="nav-link" href="./html/customer care.html">Customer Care</a>
         </nav>
         <div class="right-top">
             <button class="button-login" id="signout">Sign Out</button>
@@ -28,16 +28,16 @@
         <section id="anime"></section>
         <div class="button-container">
             <div class="button-1">
-                <img src="../Images/icon-pickup.png" class="phone" alt="Pickup Icon">
+                <img src="./Images/icon-pickup.png" class="phone" alt="Pickup Icon">
                 <p class="tag">Buy your shipment</p>
                 <p class="info">Add products to buy</p>
-                <button onclick="window.location.href = 'home page.html';" class="do">Buy Now</button>
+                <button onclick="window.location.href = './html/home page.html';" class="do">Buy Now</button>
             </div>
             <div class="button-2">
-                <img src="../Images/icon-tracking.png" class="track" alt="Tracking Icon">
+                <img src="./Images/icon-tracking.png" class="track" alt="Tracking Icon">
                 <p class="tag">Track your shipment</p>
                 <p class="info">Click to know where your parcel has reached</p>
-                <button onclick="window.location.href = 'tracking.html';" class="do-1">Track a Shipment</button>
+                <button onclick="window.location.href = './html/tracking.html';" class="do-1">Track a Shipment</button>
             </div>
         </div>
 
@@ -76,7 +76,7 @@
         let Signout = () => {
             sessionStorage.removeItem("user-creds");
             sessionStorage.removeItem("user-info");
-            window.location.href = 'register.html';
+            window.location.href = './html/register.html';
         };
         signoutBtn.addEventListener('click', Signout);
     </script>
